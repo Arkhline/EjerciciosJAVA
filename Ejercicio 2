@@ -1,7 +1,69 @@
 package ar.edu.ottokrause.psr;
 public class Vectro3D {
+
     private double x = 0.0;
     private double y = 0.0;
     private double z = 0.0;
     
-    public
+    public Vector3D() {
+    
+    }
+    
+    public Vector3D(double x, double y, double z) { //Crea un vector con sus coordenadas en (x, y, z)
+        this.x = x;
+        this.y = y;
+        this.z = z;
+    }
+    
+    public double getX() { //Devuelve la coordenada x del vector
+        return x;
+    }
+    
+    
+    public void setX() { //Settea la coordenada x del vector
+        this.x = x;
+    }
+    
+    
+    public double getY() { //Devuelve la coordenada y del vector
+        return y;
+    }
+    
+    
+    public void setY() { //Settea la coordenada y del vector
+        this.y = y;
+    }
+    
+    
+    public double getZ() { //Devuelve la coordenada z del vector
+        return z;
+    }
+    
+    
+    public void setZ() { //Settea la coordenada z del vector
+        this.z = z;
+    }
+    
+    public double norm() { //Devuleve la norma del vector
+        //TO DO norma de un vector
+        return 0.0;
+    }
+    
+    @Override 
+    public String toString() {
+        return "Vector3D{" + "x =" + x + ", y =" + y + ", z =" + z + '}';
+    }
+    
+    public void add(Vector3D aVector) { //Devuelve un nuevo punto que es la suma de las coordenadas de this con las coordenadas de aVector
+        this.x += aVector.getX();
+        this.y += aVector.getY();
+        this.z += aVector.getZ();
+    }
+    
+    public void doProduct(Vector3D aVector) { //Devuelve un nuevo punto que es el producto escalar de las coordenadas de this con las coordenadas de aVector
+        this.x *= aVector.getX();
+        this.y *= aVector.getY();
+        this.z *= aVector.getZ();
+    }
+    
+}
