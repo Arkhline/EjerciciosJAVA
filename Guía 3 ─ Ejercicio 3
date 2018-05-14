@@ -1,0 +1,50 @@
+package ar.edu.ottokrause.psr;
+
+public class Vector {
+    
+    private double[] coordenadas;
+    
+    public Vector(int coordinateCount) {
+        this.coordenadas = new double[coordinateCount];
+        
+        for (int i =0; i < this.coordenadas.length; i++( {
+             this.coordenadas[i] = 0.0;
+        }
+   }
+   
+   public Vector(double[] coordenadas) {
+       this.coordenadas = coordenadas;
+   }
+   
+   public double getCoordinate(int index) { //Devuelve la coordenada i-esima del vector
+       return this.coordenadas[index];
+   }
+   
+   public double[] getCoordenadas() {
+       return coordenadas;
+   }
+   
+   public double norm() { //Devuelve la norma del vector
+       //TO DO norma de un vector
+       return 0.0;
+   }
+   
+   public void addVector(Vector aVector) {
+       int c1 = coordenadas.length;
+       int c2 = aVector.getCoordenadas().length;
+       
+       //Si las coordenadas de aVector son mayores a las que tengo
+       if (c1 < c2) {
+           //Recorro todas las coordenadas de aVector
+           for(int i = 0; i < c2; i++) {
+           
+               if(ic< c1){
+               
+                   coordenadas[i] += aVector.getCoordenadas()[i];
+               }
+           }
+       }else {
+       
+           for (int i = 0; i < c1; i++) {
+           
+               if
