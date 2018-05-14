@@ -54,7 +54,7 @@ public class Vectro3D {
         return "Vector3D{" + "x =" + x + ", y =" + y + ", z =" + z + '}';
     }
     
-    public double add(Vector3D aVector) { //Devuelve un nuevo punto que es la suma de las coordenadas de this con las coordenadas de aVector
+    public Vector3D add(Vector3D aVector) { //Devuelve un nuevo punto que es la suma de las coordenadas de this con las coordenadas de aVector
         this.x += aVector.getX();
         this.y += aVector.getY();
         this.z += aVector.getZ();
