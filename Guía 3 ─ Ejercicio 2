@@ -54,13 +54,13 @@ public class Vectro3D {
         return "Vector3D{" + "x =" + x + ", y =" + y + ", z =" + z + '}';
     }
     
-    public void add(Vector3D aVector) { //Devuelve un nuevo punto que es la suma de las coordenadas de this con las coordenadas de aVector
+    public double add(Vector3D aVector) { //Devuelve un nuevo punto que es la suma de las coordenadas de this con las coordenadas de aVector
         this.x += aVector.getX();
         this.y += aVector.getY();
         this.z += aVector.getZ();
     }
     
-    public void doProduct(Vector3D aVector) { //Devuelve un nuevo punto que es el producto escalar de las coordenadas de this con las coordenadas de aVector
+    public double doProduct(Vector3D aVector) { //Devuelve un nuevo punto que es el producto escalar de las coordenadas de this con las coordenadas de aVector
         this.x *= aVector.getX();
         this.y *= aVector.getY();
         this.z *= aVector.getZ();
