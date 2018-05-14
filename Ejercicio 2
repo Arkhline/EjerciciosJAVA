@@ -1,0 +1,7 @@
+package ar.edu.ottokrause.psr;
+public class Vectro3D {
+    private double x = 0.0;
+    private double y = 0.0;
+    private double z = 0.0;
+    
+    public
