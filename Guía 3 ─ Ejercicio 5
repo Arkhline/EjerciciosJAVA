@@ -1,0 +1,39 @@
+
+package ar.edu.ottokrause.psr;
+
+public class Rectangle extends Figure {
+
+    private final Vector origin;
+    private final Vector corner;
+
+    public Rectangle(Vector origin, Vector corner) {
+        // TODO: Chequear que están en el orden esperado.
+        this.origin = origin;
+        this.corner = corner;
+    }
+    public class Vector{
+         private final double x;
+         private final double y;
+    public Vector(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public double getX(){
+        return this.x;
+    }
+
+    public double getY(){
+        return this.y;
+    }
+}
+    public double area() {
+        return (this.corner.getX() - this.origin.getX())
+                * (this.origin.getY() - this.corner.getY());
+    }
+
+    public double perimeter() {
+        return 2 * (this.corner.getX() - this.origin.getY())
+                + 2 * (this.corner.getY() - this.origin.getY());
+    }
+}
