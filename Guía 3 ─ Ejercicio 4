@@ -1,0 +1,36 @@
+package ar.edu.ottokrause.psr;
+
+public class Circle {
+    
+    private final double x = 0;
+    private final double y = 0;
+
+    private double area = 0;
+    private double radius = 0;
+    private double perimeter = 0;
+    private Point center = new Point (x, y);
+    
+    public Circle() {
+    //Reever constructory su funcionalidad 
+    }
+    
+    public double getArea(){
+        //Devuelve el área del círculo.
+        return Math.PI*this.radius*this.radius;
+    }
+    public Point getCenter(double x, double y){
+        //Devuelve el punto que representa el centro del círculo.
+        return this.center;
+    }
+    
+    public double getRadius(){
+        //Devuelve el radio del círculo.
+        return this.radius;
+    }
+    
+    public double getPerimeter(){
+        //Devuelve la longitud de la circunferencia.
+        return 2*Math.PI*this.radius; 
+    }
+
+}
