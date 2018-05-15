@@ -1,0 +1,47 @@
+package ar.edu.ottokrause.psr;
+
+public class Triangle {
+
+    private double x;
+    private double y;
+    private double z;
+
+    private final double area = 0;
+    private final double vertices[];
+
+    public Triangle() {
+        this.vertices = new double[]{x, y, z};
+    }
+
+    public double getX() {
+        return x;
+    }
+
+    public double getY() {
+        return y;
+    }
+
+    public double getZ() {
+        return z;
+    }
+
+    public double getArea() {
+        //Devuelve el área del triángulo.
+        return this.area;
+    }
+
+    public double[] getVertices() {
+        //Devuelve un arreglo que contiene los puntos que forman los vértices del triángulo.
+        return vertices;
+    }
+
+    public double getVertex(int index) {
+        //Devuelve uno de los puntos que forman los vértices del triángulo.
+        return this.vertices[index];
+    }
+
+    public double getPerimeter() {
+        //Devuelve el perímetro del triángulo.
+        return this.getX() * this.getY() * this.getZ();
+    }
+}
