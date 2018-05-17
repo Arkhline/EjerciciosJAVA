@@ -17,6 +17,7 @@ public class IntegerArrayList implements IntegerList {
     
 
     public void resize(int newSize){
+        //Define arreglo de integer newElements y se le copia los valores de este a el arreglo integer newSize 
         int[] newElements = new int[newSize];
         System.arraycopy(this.elements, 0, newElements, 0, Math.min(this.size(), newSize));
     }
