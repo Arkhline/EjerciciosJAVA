@@ -14,19 +14,23 @@ public class Vector {
    
    public Vector(double[] coordenadas) {
        double []coordenadas1 = new double[corrdenadas.length]; 
-       this.coordenadas = coordenadas1;
+       for(int i = 0; i<coordenadas.length; ++i){
+           double []coordenada1 = coordenadas.length;
+       }
    }
-   
    
    public Vector(double[] coordenadas) {
        double []coordenadas2 = new double[corrdenadas.length]; 
-       this.coordenadas = coordenadas2;
+           for(int i = 0; i<coordenadas.length; ++i){
+              double []coordenada2 = coordenadas.length;
+           }
    }
-   
-   
+  
    public Vector(double[] coordenadas) {
        double []coordenadas3 = new double[corrdenadas.length]; 
-       this.coordenadas = coordenadas3;
+           for(int i = 0; i<coordenadas.length; ++i){
+              double []coordenada3 = coordenadas.length;
+           }
    }
    
    public double getCoordinate(int index) { //Devuelve la coordenada i-esima del vector
