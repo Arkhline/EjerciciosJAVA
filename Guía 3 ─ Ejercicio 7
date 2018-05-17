@@ -1,0 +1,104 @@
+package ar.edu.ottokrause.psr;
+
+public class IntegerArrayList implements IntegerList {
+
+    
+    private int[] elements;
+    
+    public IntegerArrayList(int size) {
+        this.elements = new int [size];
+    }
+    
+    public Integer set(int index, int element){
+        //Ingresa los datos a la variable
+        return this.elements[index]= element;
+    }
+    
+    
+
+    public void resize(int newSize){
+        int[] newElements = new int[newSize];
+        System.arraycopy(this.elements, 0, newElements, 0, Math.min(this.size(), newSize));
+    }
+
+    
+    
+    @Override
+    public boolean add(Integer element) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void add(int index, Integer element) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean addAll(IntegerList aList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean addAll(int index, IntegerList aList) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void clear() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean contains(Integer element) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public Integer get(int index) {
+        //Lee los datos de la variable
+        return this.elements[index];
+    }
+
+    @Override
+    public int indexOf(Integer element) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public boolean isEmpty() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int lastIndexOf(Integer element) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int remove(int index) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void set(int index, Integer element) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int size() {
+        //Devuelve el tamaño de elements
+        return this.elements.length;
+    }
+
+    @Override
+    public IntegerList subList(int fromIndex, int toIndex) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public int[] toArray() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+   
+}
