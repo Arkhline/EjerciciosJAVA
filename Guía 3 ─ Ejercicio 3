@@ -13,7 +13,20 @@ public class Vector {
    }
    
    public Vector(double[] coordenadas) {
-       this.coordenadas = coordenadas;
+       double []coordenadas1 = new double[corrdenadas.length]; 
+       this.coordenadas = coordenadas1;
+   }
+   
+   
+   public Vector(double[] coordenadas) {
+       double []coordenadas2 = new double[corrdenadas.length]; 
+       this.coordenadas = coordenadas2;
+   }
+   
+   
+   public Vector(double[] coordenadas) {
+       double []coordenadas3 = new double[corrdenadas.length]; 
+       this.coordenadas = coordenadas3;
    }
    
    public double getCoordinate(int index) { //Devuelve la coordenada i-esima del vector
