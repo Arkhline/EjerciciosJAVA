@@ -1,12 +1,30 @@
 package ar.edu.ottokrause.psr;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Main {
 
     public static void main(String[] args) {
-        List<Integer> lala = new ArrayList<>();
+        int[] lala = new int[] {1,2,3};
+
+        int ultimovalor = lala[lala.length - 1]; // ultimo valor lo guardamos para que no se pierda.
+
+        int ultimaposicion = lala.length - 1;
+
+
+        for (int j= ultimaposicion; j > -1; j--) {
+            if (j - 1 > -1) {
+                lala[j] = lala[j - 1];
+            } else {
+                lala[0] = ultimovalor;
+            }
+        }
+
+
+
+
+
+
+
+
 
         IntegerList list = new IntegerArrayList(0);
         list.add(1);
