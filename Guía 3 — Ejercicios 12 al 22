@@ -109,5 +109,28 @@ public class Matrix {
         }   
     }
     
-    
+      /**
+     * Cambiar a la matriz transpuesta.
+     */
+    public void transpuesta() {
+
+        // Conservamos las longitudes de los vectores horizontales y los verticales.
+        int longitudHorizontal = this.longitudHorizontal();
+        int longitudVertical = this.longitudVertical();
+
+        // Creamos una matriz con las longitudes al revéz: lo que era la longitud horizontal ahora es vertical, y la vertical pasa a ser la horizontal.
+        double[][] nuevaMatriz = new double[longitudVertical][longitudHorizontal];
+
+        // Recorremos todos los valores de la matriz actual para guardarlos en la nueva matriz con 'h' como 'v' y 'v' como 'h'.
+        for (int h = 0; h < longitudHorizontal; h++) {
+            for (int v = 0; v < longitudVertical; v++) {
+                nuevaMatriz[v][h] = this.matriz[h][v];
+            }
+        }
+
+        // Reemplazamos la matriz original por la nueva transpuesta.
+        this.matriz = nuevaMatriz;
+
+    }
+
 } 
