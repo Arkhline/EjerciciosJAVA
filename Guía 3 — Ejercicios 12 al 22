@@ -1,0 +1,113 @@
+
+package ar.edu.ottokrause.psr;
+
+public class Matrix {
+    
+    public int row = 0;
+    public int col = 0;
+    public double value;
+    public double[][] matriz;
+    public double[][] matrizACopiar;
+    public double[][] matrizCopia;
+    public double[][] matrizASumar;
+    public double[][] matrizARestar;
+    public double[][] matrizAMutiplicar;
+    
+    public double row(){
+        return this.row;
+    }
+    
+    public double col(){
+        return this.col;
+    }
+
+    public Matrix(int row, int col) {
+        this.row = 0;
+        this.col = 0;
+    }
+    
+    public void setValue(int row, int col, double value) {
+        
+        for(int i = 0; i < row; i++ ){
+            for(int j = 0; j < col; j++){
+                this.value = matriz[i][j];
+            }
+        }
+    }
+    
+    public int getValue(int row, int col) {
+        //TODO devolver el valor que se encuentra en la fila row y columna col
+        //HECHO
+        //return this.matriz = new double[row][col];
+        return (int) value;
+    }
+    
+    public Matrix(double[][] elements) {
+        this.matriz = elements;
+    }
+    
+    public Matrix(Matrix matrix){
+    
+        for (double[] matrizACopiar1 : matrizACopiar) {
+            for (int j = 0; j < matrizACopiar1.length; j++) {
+                this.matrizCopia = matrizACopiar;
+            }
+        }
+    }
+        
+    public void MatrixEscalar(int n) {
+        
+        for(int i = 0; i < matriz.length; i++ ){
+            for(int j = 0; j < matriz[i].length; j++){
+                double resultado = n * matriz[i][j];
+            }
+        }
+    }
+    
+    public void SumaMatrix() throws Exception{
+    
+        if ((matriz.length == matrizASumar.length) && (matriz[0].length == matrizASumar[0].length)){
+            double[][] suma = new double [matriz.length][matriz[0].length];   
+                for(int i = 0; i < matriz.length; i++){
+                    for(int j = 0; j < matriz[i].length; j++){
+                        suma[i][j] = matriz[i][j] + matrizASumar[i][j];
+                        }   
+                    }  
+                }
+        else{                
+            throw new Exception();
+        }
+    }
+
+    public void RestaMatrix() throws Exception{ 
+    
+        if ((matriz.length == matrizARestar.length) && (matriz[0].length == matrizARestar[0].length)){
+            double[][] suma = new double [matriz.length][matriz[0].length];   
+                for(int i = 0; i < matriz.length; i++){
+                    for(int j = 0; j < matriz[i].length; j++){
+                        suma[i][j] = matriz[i][j] - matrizARestar[i][j];
+                        }   
+                    }  
+                }
+        else{                
+            throw new Exception();
+        }
+    }
+    
+    public void ProductMatrix() throws Exception{
+        
+        if ((matriz.length == matrizAMutiplicar.length) && (matriz[0].length == matrizAMutiplicar[0].length)){
+            double[][] suma = new double [matriz.length][matriz[0].length];   
+                for(int i = 0; i < matriz.length; i++){
+                    for(int j = 0; j < matriz[i].length; j++){
+                        suma[i][j] = matriz[i][j] * matrizAMutiplicar[i][j];
+                        }   
+                    }  
+                }
+        else{                
+            throw new Exception();
+        }   
+    }
+    
+    
+} 
