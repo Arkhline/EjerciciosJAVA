@@ -1,55 +1,55 @@
 package ar.edu.ottokrause.psr;
 
-
 public class IntegerLinkedList {
 
     private IntegerNode first;
-    private IntegerNode last;
-    
+
     public IntegerLinkedList() {
         this.first = null;
     }
 
-     public int add(Integer value) {
-         if  (first = null){
-             
-         }
-        int count = 0;
-        IntegerNode node = this.first;
-        IntegerNode nodef = this.last;
-        
-        while (node != null) {
-            count++;
-            node = node.getNext();
+    public int add(Integer value) {
+        IntegerNode newNode = new IntegerNode(value);
+
+        if (first == null) {
+            this.first = newNode;
+        } else {
+            IntegerNode node = this.first;
+            while (node != null) {
+                node = node.getNext();
+
+                if (node != null && node.getNext() != null) {
+                    //TODO 
+
+                }
+            }
         }
-        
+
         return 0;
-        
     }
-    
+
     public Integer get(int index) {
         int count = 0;
         int newValue = 0;
         IntegerNode node = this.first;
-        
+
         while (node != null) {
             count++;
-            if (index == count){
+            if (index == count) {
                 newValue = count;
             }
         }
         return newValue;
     }
-    
+
     public int size() {
         int count = 0;
         IntegerNode node = this.first;
-        
+
         while (node != null) {
             count++;
             node = node.getNext();
         }
-        
         return count;
     }
 }
