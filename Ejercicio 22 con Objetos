@@ -1,0 +1,15 @@
+ //Ejercicio 22
+    public Matrix rigthRotate(Matrix a)
+    {
+        double valorPrevio = a.matriz[a.rows() - 1][a.columns() - 1];
+        double valorActual;
+        for (int i = 0; i < a.rows(); i++) {
+            for (int j = 0; j < a.columns(); j++) {
+                valorActual = a.get(i, j);
+                a.set(i, j, valorPrevio);
+                valorPrevio = valorActual;
+            }
+        }
+        Matrix nuevo = new Matrix(a.matriz);
+        return nuevo;
+    }
