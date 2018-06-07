@@ -18,12 +18,12 @@ public class Point {
     }
     
     public double getY() { //Obtiene la posicion en Y
-        return this.x;
+        return this.y;
     }
     
     public void add(Point aPoint) { //Devuelve un nuevo punto que es la suma de las coordenadas de this con las coordenadas de aPoint
         this.x += aPointn.getX();
-        this.x += aPointn.getX()
+        this.y += aPointn.getY()
     }
     
     @Override
